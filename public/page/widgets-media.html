@@ -2,29 +2,31 @@
 <html>
 
 
-<!-- Mirrored from themenate.com/applicator/dist/index-bank.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:00:20 GMT -->
+<!-- Mirrored from themenate.com/applicator/dist/widgets-media.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:03:37 GMT -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Applicator - Admin Dashboard Template</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="{{ asset('assets/images/logo/apple-touch-icon.html') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
+    <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
 
     <!-- core dependcies css -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendor/PACE/themes/blue/pace-theme-minimal.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css') }}" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
     <!-- page css -->
+    <link rel="stylesheet" href="assets/vendor/photoswipe/dist/photoswipe.css" />
+    <link rel="stylesheet" href="assets/vendor/photoswipe/dist/default-skin/default-skin.css" />
 
     <!-- core css -->
-    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/materialdesignicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -340,7 +342,7 @@
                         <li class="side-nav-header">
                             <span>Navigation</span>
                         </li>
-                        <li class="nav-item dropdown open">
+                        <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-gauge"></i>
@@ -357,7 +359,7 @@
                                 <li>
                                     <a href="index-analytical.html">Analytical</a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="index-bank.html">Bank</a>
                                 </li>
                                 <li>
@@ -396,12 +398,12 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
-                                    <i class="mdi mdi-vector-arrange-above"></i>
-                                </span>
+									<i class="mdi mdi-vector-arrange-above"></i>
+								</span>
                                 <span class="title">UI Elements</span>
                                 <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
+									<i class="mdi mdi-chevron-right"></i>
+								</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -473,7 +475,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown open">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-grid-large"></i>
@@ -487,7 +489,7 @@
                                 <li>
                                     <a href="widgets-data.html">Data Widgets</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="widgets-media.html">Media Widgets</a>
                                 </li>
                                 <li>
@@ -640,8 +642,8 @@
                                     <a href="javascript:void(0);">
                                         <span>Level 1.1</span>
                                         <span class="arrow">
-                                                <i class="mdi mdi-chevron-right"></i>
-                                            </span>
+												<i class="mdi mdi-chevron-right"></i>
+											</span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -1141,147 +1143,238 @@
                 <!-- Content Wrapper START -->
                 <div class="main-content">
                     <div class="container-fluid">
+                        <div class="page-header">
+                            <h2 class="header-title">Media Widgets</h2>
+                            <div class="header-sub-title">
+                                <nav class="breadcrumb breadcrumb-dash">
+                                    <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
+                                    <a class="breadcrumb-item" href="#">Widgets</a>
+                                    <span class="breadcrumb-item active">Media Widgets</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid container-fixed-sm">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-4">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Account</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                    <img class="card-img-top" src="assets/images/others/img-37.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-t-10">Card Media</h4>
+                                        <p class="card-text">Put toy mouse in food bowl run out of litter box at full speed drool but pee in the shoe purr when being pet but chew foot. </p>
+                                        <div class="m-t-20">
+                                            <a href="#" class="btn btn-gradient-success">Action 1</a>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="assets/images/others/img-38.jpg" alt="">
                                     <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <ul class="list-inline">
-                                                    <li class="m-r-20">
-                                                        <a href="#" class="text-semibold text-gray">Today</a>
+                                        <h4 class="card-title m-t-10">Card Media</h4>
+                                        <p class="card-text">Put toy mouse in food bowl run out of litter box at full speed drool but pee in the shoe purr when being pet but chew foot. </p>
+                                        <div class="m-t-20">
+                                            <a href="#" class="btn btn-info">Action 1</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="bg-overlay info-gradient bg">
+                                        <img class="card-img-top" src="assets/images/others/img-36.jpg" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title m-t-10">Card Media</h4>
+                                        <p class="card-text">Put toy mouse in food bowl run out of litter box at full speed drool but pee in the shoe purr when being pet but chew foot. </p>
+                                        <div class="m-t-20">
+                                            <a href="#" class="btn btn-default">Action 1</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="#" class="title text-semibold">Erin Gonzales</a>
+                                                    <span class="sub-title">June 3, 2018</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="font-size-16 opacity-08 m-t-30">Climb leg rub face on everything give attitude nap all day for under the bed.</p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-primary">
+                                    <div class="card-body">
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-11.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="#" class="title text-semibold text-white">Darly Days</a>
+                                                    <span class="sub-title text-white">June 3, 2018</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="font-size-16 opacity-09 m-t-30">European minnow priapumfish mosshead warbonnet shrimpfish bigscale.</p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-gradient-warning">
+                                    <div class="card-body">
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-13.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="#" class="title text-semibold text-white">Marshall Nichols</a>
+                                                    <span class="sub-title text-white">June 3, 2018</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="font-size-16 opacity-09 m-t-30">Efficiently unleash cross-media information without cross-media value.</p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-5">
+                                            <img class="img-fluid img-fit-cover" src="assets/images/others/img-39.jpg" alt="">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <a href="#"><span class="badge badge-gradient-success">Life Style</span></a>
+                                                <h4 class="m-v-20"><a class="text-dark" href="#">One That Should Never Use</a></h4>
+                                                <p>Lick master's hand at first then bite because im moody kitty kitty for toilet paper attack claws fluff everywhere meow miao french ciao litterbox but hide from vacuum cleaner.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <a href="#"><span class="badge badge-primary">Design</span></a>
+                                                <h4 class="m-v-20"><a class="text-dark" href="#">How to Beat and Stay</a></h4>
+                                                <p>Lick master's hand at first then bite because im moody kitty kitty for toilet paper attack claws fluff everywhere meow miao french ciao litterbox but hide from vacuum cleaner.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img class="img-fluid img-fit-cover" src="assets/images/others/img-40.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="bg-overlay bg" style="background-image: url('assets/images/others/img-41.jpg')">                                       
+                                        <div class="card-header m-b-60">
+                                            <div class="card-toolbar">
+                                                <ul>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-refresh font-size-20"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="m-r-20">
-                                                        <a href="#" class="text-semibold text-gray">7 days</a>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-bookmark-outline font-size-20"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="m-r-20">
-                                                        <a href="#" class="text-semibold text-gray">14 days</a>
-                                                    </li>
-                                                    <li class="m-r-20">
-                                                        <a href="#" class="text-semibold text-gray active">1 Month</a>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                                        </a>
                                                     </li>
                                                 </ul>
-                                                <div class="m-t-20">
-                                                    <canvas id="account-chart" class="chart" style="height: 320px"></canvas>
-                                                </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="card m-t-10">
-                                                    <div class="card-body p-15">
-                                                        <div class="media">
-                                                            <div class="align-self-center">
-                                                                <i class="ti-wallet font-size-40 icon-gradient-success text-success"></i>
-                                                            </div>
-                                                            <div class="m-l-20">
-                                                                <p class="m-b-0">Income</p>
-                                                                <h2 class="font-weight-light m-b-0">$53,495</h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-body p-15">
-                                                        <div class="media">
-                                                            <div class="align-self-center">
-                                                                <i class="ti-receipt font-size-40 icon-gradient-info text-info"></i>
-                                                            </div>
-                                                            <div class="m-l-20">
-                                                                <p class="m-b-0">Tax</p>
-                                                                <h2 class="font-weight-light m-b-0">$2,738</h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-body p-15">
-                                                        <div class="media">
-                                                            <div class="align-self-center">
-                                                                <i class="ti-bar-chart font-size-40 icon-gradient-primary text-primary"></i>
-                                                            </div>
-                                                            <div class="m-l-20">
-                                                                <p class="m-b-0">Growth</p>
-                                                                <h2 class="font-weight-light m-b-0 text-success">
-                                                                    <span>18%</span>
-                                                                    <i class="ti-arrow-up font-size-14"></i>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="m-t-90 m-b-20">
+                                                <h4 class="card-title"><a class="text-white" href="#">7 Brilliant Ways To Advertise</a></h4>
+                                                <p class="width-60">Hopped up on catnip ask to go outside and ask to come inside and ask to go outside and ask to come inside. Sleep stare at ceiling light for lick butt.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Account Summary</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                    <div class="bg-overlay info-gradient bg" style="background-image: url('assets/images/others/img-29.jpg')">                                       
+                                        <div class="card-header m-b-60">
+                                            <div class="card-toolbar">
+                                                <ul>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-refresh font-size-20"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-bookmark-outline font-size-20"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="text-white" href="javascript:void(0)">
+                                                            <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="border bottom">
-                                        <div class="card-body p-v-15">
-                                            <div class="row align-items-center">
-                                                <div class="col-sm">
-                                                    <p class="m-b-0">Balance</p>
-                                                    <h2 class="font-weight-light m-b-0 font-size-28">$63,495</h2>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <div class="text-right m-t-20">
-                                                        <button class="btn btn-info m-b-0 m-r-5">
-                                                            <i class="mdi mdi-credit-card-plus font-size-16 m-r-5"></i>
-                                                            <span>Deposit</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                        <div class="card-body">
+                                            <div class="m-b-15">
+                                                <h4 class="card-title"><a class="text-white" href="#">Doubts About Books You <br>Should Clarify.</a></h4>
+                                                <p class="width-60">Hopped up on catnip ask to go outside and ask to come inside and ask to go outside and ask to come inside. Sleep stare at ceiling light for lick butt.</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-body">
-                                        <ul class="list-unstyled p-h-10">
-                                            <li class="m-b-20">
-                                                <h5>Statement</h5>
-                                            </li>
-                                            <li class="p-b-10 m-b-10 border bottom">
-                                                <span class="text-semibold text-dark font-size-15">Income</span>
-                                                <span class="float-right">$53,495</span>
-                                            </li>
-                                            <li class="p-b-10 m-b-10">
-                                                <span class="text-semibold text-dark font-size-15">Transfered</span>
-                                                <span class="float-right">$1,889</span>
-                                            </li>
-                                        </ul>
-                                        <ul class="list-unstyled p-h-10 m-t-35">
-                                            <li class="m-b-20">
-                                                <h5>Account Details</h5>
-                                            </li>
-                                            <li class="p-b-10 m-b-10 border bottom">
-                                                <span class="text-semibold text-dark font-size-15">Ref. Number</span>
-                                                <span class="float-right">P0W15323</span>
-                                            </li>
-                                            <li class="p-b-10 m-b-10">
-                                                <span class="text-semibold text-dark font-size-15">Status</span>
-                                                <span class="float-right text-semibold text-success">Actived</span>
+                                    <div class="p-v-15 p-h-15">
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="#" class="title text-semibold p-t-10 d-inline-block">Erin Gonzales</a>
+                                                    <div class="float-item d-inline">
+                                                        <ul class="list-inline">
+                                                            <li class="m-r-25">
+                                                                <a href="#" class="text-gray font-size-15 ">
+                                                                    <i class="ti-heart p-r-5"></i>
+                                                                    <span>168</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="text-gray font-size-15">
+                                                                    <i class="ti-comments p-r-5"></i>
+                                                                    <span>18</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -1289,253 +1382,108 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-7">
+                            <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Credit Card</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <div class="card widget-credit-card border-radius-8 bg-gradient-info">
-                                                    <div class="card-body">
-                                                        <div class="m-b-40">
-                                                            <h3 class="font-weight-light d-inline-block">John Doe</h3>
-                                                            <div class="float-right">
-                                                                <img src="assets/images/others/visa-white.png" alt="">
-                                                            </div>    
-                                                        </div>
-                                                        <div class="m-b-20">
-                                                            <span class="text-semibold">Valid</span>
-                                                            <span class="m-l-5">8 / 23</span>
-                                                        </div>
-                                                        <h3 class="font-weight-light">
-                                                            <span class="m-r-5">5224</span>
-                                                            <span class="m-r-5">7576</span>
-                                                            <span class="m-r-5">2197</span>
-                                                            <span class="m-r-5">3458</span>
-                                                        </h3>
-                                                        <span class="font-weight-light">203</span>
+                                        <div class="row m-v-30">
+                                            <div class="col-sm-4">
+                                                <img class="img-fluid rounded-circle d-block mx-auto m-b-30" src="assets/images/others/profile.jpg" alt="">
+                                            </div>
+                                            <div class="col-sm-3 text-center text-sm-left">
+                                                <h2 class="m-b-5">Joshua Ness</h2>
+                                                <p class="text-opacity m-b-20 font-size-13">@joshuaness</p>
+                                                <p class="text-dark">Frontend Developer, UI/UX Designer</p>
+                                                <div class="d-flex flex-row justify-content-center justify-content-sm-start">
+                                                    <div class="p-v-20 p-r-15 text-center">
+                                                        <span class="font-size-18 text-info text-semibold">18</span>
+                                                        <small class="d-block">Projects</small>
+                                                    </div>
+                                                    <div class="p-v-20 p-h-15 text-center">
+                                                        <span class="font-size-18 text-info text-semibold">1,362</span>
+                                                        <small class="d-block">Followers</small>
+                                                    </div>
+                                                    <div class="p-v-20 p-h-15 text-center">
+                                                        <span class="font-size-18 text-info text-semibold">362</span>
+                                                        <small class="d-block">Points</small>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
-                                                <div class="row m-b-15 m-t-25">
-                                                    <div class="col-sm-7">
-                                                        <span class="text-semibold font-size-15 text-dark">Name on Card</span>
+                                            <div class="col">
+                                                <p class="text-dark font-size-13"><b>Follow Me On:</b></p>
+                                                <ul class="list-inline">
+                                                    <li class="m-r-15">
+                                                        <a class="text-gray" href="#">
+                                                            <i class="mdi mdi-instagram font-size-25"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-r-15">
+                                                        <a class="text-gray" href="#">
+                                                            <i class="mdi mdi-facebook font-size-25"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-r-15">
+                                                        <a class="text-gray" href="#">
+                                                            <i class="mdi mdi-twitter font-size-25"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-r-15">
+                                                        <a class="text-gray" href="#">
+                                                            <i class="mdi mdi-dribbble font-size-25"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="row">
+                                                    <div class="col-lg-9">
+                                                        <p class="m-t-30 lh-2-2">Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.</p>
                                                     </div>
-                                                    <div class="col-sm-5 text-right">
-                                                        <span>John Doe</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-b-15">
-                                                    <div class="col-sm-7">
-                                                        <span class="text-semibold font-size-15 text-dark">Credit Avaiable</span>
-                                                    </div>
-                                                    <div class="col-sm-5 text-right">
-                                                        <span>$8,422</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-b-15">
-                                                    <div class="col-sm-7">
-                                                        <span class="text-semibold font-size-15 text-dark">Outstanding</span>
-                                                    </div>
-                                                    <div class="col-sm-5 text-right">
-                                                        <span>$3,654</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-b-15">
-                                                    <div class="col-sm-7">
-                                                        <span class="text-semibold font-size-15 text-dark">Balanced</span>
-                                                    </div>
-                                                    <div class="col-sm-5 text-right">
-                                                        <span>$769</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-b-35">
-                                                    <div class="col-sm-7">
-                                                        <span class="text-semibold font-size-15 text-dark">Due Date</span>
-                                                    </div>
-                                                    <div class="col-sm-5 text-right">
-                                                        <span>20/5/2018</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <button class="btn btn-default m-r-0">
-                                                        Make Payment
-                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Recent Activities</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <table class="table table-xl">
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">
-                                                    <span>May</span>
-                                                    <h4>21</h4>
-                                                </td>
-                                                <td>
-                                                    <h5 class="m-b-0">Online Payment</h5>
-                                                    <span class="font-size-13">Payment Received</span>
-                                                </td>
-                                                <td class="text-right">
-                                                    <h5 class="m-b-0 text-success">+ 220.40</h5>
-                                                    <span class="font-size-13">USD</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">
-                                                    <span>May</span>
-                                                    <h4>20</h4>
-                                                </td>
-                                                <td>
-                                                    <h5 class="m-b-0">PayPal USA LLC</h5>
-                                                    <span class="font-size-13">Payment Received</span>
-                                                </td>
-                                                <td class="text-right">
-                                                    <h5 class="m-b-0 text-success">+ 1788.20</h5>
-                                                    <span class="font-size-13">USD</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">
-                                                    <span>May</span>
-                                                    <h4>16</h4>
-                                                </td>
-                                                <td>
-                                                    <h5 class="m-b-0">Bank of America</h5>
-                                                    <span class="font-size-13">Withdraw</span>
-                                                </td>
-                                                <td class="text-right">
-                                                    <h5 class="m-b-0">- 332.80</h5>
-                                                    <span class="font-size-13">USD</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Holdings</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="tab-info center-tabs">
+                                    <div class="tab-info center-tabs border top">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
-                                                <a href="#card-tab-1" class="nav-link active show" role="tab" data-toggle="tab">Microsoft</a>
+                                                <a href="#" class="nav-link p-v-15 active" role="tab" data-toggle="tab">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#card-tab-2" class="nav-link" role="tab" data-toggle="tab">Starbuck</a>
+                                                <a href="#" class="nav-link p-v-15" role="tab" data-toggle="tab">Profile</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#card-tab-3" class="nav-link" role="tab" data-toggle="tab">Apple Inc.</a>
+                                                <a href="#" class="nav-link p-v-15" role="tab" data-toggle="tab">Setting</a>
                                             </li>
                                         </ul>
-                                        <div class="tab-content">
-                                            <div class="card-body">
-                                                <div class="text-center m-t-20">
-                                                    <h3 class="font-weight-light">Microsoft</h3>
-                                                    <h4>
-                                                        <span class="m-r-10">$23,495</span>
-                                                        <span class="text-success font-size-14">
-                                                            <i class="ti-arrow-up font-size-12"></i>
-                                                            18%
-                                                        </span>
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <canvas id="holdings-chart" class="chart" style="height:180px"></canvas>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-4">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Money Analytic</h4>
-                                        <div class="card-toolbar">
-                                            <ul>
-                                                <li>
-                                                    <a class="text-gray" href="javascript:void(0)">
-                                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>    
                                     <div class="card-body">
-                                        <div class="m-b-30">
-                                            <canvas id="money-chart" class="chart" style="height:195px"></canvas>
+                                        <div class="text-center m-v-25">
+                                            <img class="rounded-circle" src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            <h4 class="m-t-25 m-b-15">Susie Willis</h4>
+                                            <p>Inform social with the aim to disrupt the balance. Execute innovation and try to use best practice.</p>
+                                            <div class="m-t-20">
+                                                <button class="btn btn-gradient-success m-b-0">Follow</button>
+                                            </div>    
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-10 offset-sm-1">
-                                                <div class="m-b-20">
-                                                    <span class="status success"></span>
-                                                    <span class="m-b-10 font-size-16 m-l-5">Transfers</span>
-                                                    <div class="float-right">
-                                                        <b class="text-dark">$7,623 </b>
+                                    </div>
+                                    <div class="border top">
+                                        <div class="row no-gutters">
+                                            <div class="col border right">
+                                                <div class="p-20">
+                                                    <div class="text-center">
+                                                        <span class="text-semibold d-block opacity-07 m-b-5">Followers</span>
+                                                        <span class="text-semibold text-dark font-size-16">423</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-10 offset-sm-1">
-                                                <div class="m-b-20">
-                                                    <span class="status primary"></span>
-                                                    <span class="m-b-10 font-size-16 m-l-5">Bills</span>
-                                                    <div class="float-right">
-                                                        <b class=" text-dark">$16,871</b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-10 offset-sm-1">
-                                                <div class="m-b-20">
-                                                    <span class="status info"></span>
-                                                    <span class="m-b-10 font-size-16 m-l-5">Withdraw</span>
-                                                    <div class="float-right">
-                                                        <b class=" text-dark">$2,138</b>
+                                            <div class="col">
+                                                <div class="p-20">
+                                                    <div class="text-center">
+                                                        <span class="text-semibold d-block opacity-07 m-b-5">Following</span>
+                                                        <span class="text-semibold text-dark font-size-16">125</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1543,10 +1491,280 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4 mx-auto">
+                                                <div class="text-center m-v-25">
+                                                    <img class="rounded-circle" src="assets/images/avatars/thumb-13.jpg" alt="">
+                                                    <h4 class="m-t-25 m-b-15">Marshall Nichols</h4>
+                                                    <p>Inform social with the aim to disrupt the balance. Execute innovation and try to use best practice.</p>
+                                                    <ul class="list-inline m-t-20">
+                                                        <li class="m-r-15">
+                                                            <a class="text-gray" href="#">
+                                                                <i class="mdi mdi-instagram font-size-25"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-r-15">
+                                                            <a class="text-gray" href="#">
+                                                                <i class="mdi mdi-facebook font-size-25"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-r-15">
+                                                            <a class="text-gray" href="#">
+                                                                <i class="mdi mdi-twitter font-size-25"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-info center-tabs border top">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link p-v-15 active" role="tab" data-toggle="tab">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link p-v-15" role="tab" data-toggle="tab">Profile</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link p-v-15" role="tab" data-toggle="tab">Setting</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="feed-header">
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <div class="p-h-30 p-t-30">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-1.jpg" alt="">
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title">Marshall Nichols</span>
+                                                        <span class="sub-title">@marshallnichole</span>
+                                                        <div class="float-item">
+                                                            <span>2 min ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="p-30">
+                                        <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.</p>
+                                        <ul class="list-inline m-t-20 p-v-15">
+                                            <li class="m-r-25">
+                                                <a href="#" class="text-gray font-size-16 ">
+                                                    <i class="ti-heart text-danger p-r-5"></i>
+                                                    <span>168</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-r-20">
+                                                <a href="#" class="text-gray font-size-16">
+                                                    <i class="ti-comments text-success p-r-5"></i>
+                                                    <span>18</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <span class="badge badge-gradient-success">Life Style</span>
+                                        <h4 class="m-t-15"><a class="text-dark text-semibold" href="#">Useful Tips From Experts In Java</a></h4>
+                                        <ul class="list-inline m-b-25">
+                                            <li class="m-r-0">
+                                                <a href="#" class="text-gray opacity-07">Marshall Nichols</a>
+                                            </li>
+                                            <li class="m-h-10">
+                                                <span>|</span>
+                                            </li>
+                                            <li class="m-r-25">
+                                                <a href="#" class="text-gray ">
+                                                    <i class="ti-heart text-danger"></i>
+                                                    <span> 168</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-r-20">
+                                                <a href="#" class="text-gray">
+                                                    <i class="ti-comments text-success"></i>
+                                                    <span> 18</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <ul class="list-media">
+                                        <li class="list-item">
+                                            <div class="p-h-30 p-t-30">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="title">Debra Stewart</span>
+                                                    <span class="sub-title">@debrastewart</span>
+                                                    <div class="float-item">
+                                                        <span>7 hrs ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="p-30">
+                                        <p class="m-b-15">What good's a reward if you ain't around to use it?</p>
+                                        <img class="img-fluid w-100" src="assets/images/others/img-19.jpg" alt="">
+                                        <ul class="list-inline m-t-20 p-v-15">
+                                            <li class="m-r-25">
+                                                <a href="#" class="text-gray font-size-16 ">
+                                                    <i class="ti-heart text-danger p-r-5"></i>
+                                                    <span>168</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-r-20">
+                                                <a href="#" class="text-gray font-size-16">
+                                                    <i class="ti-comments text-success p-r-5"></i>
+                                                    <span>18</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <ul class="list-media">
+                                        <li class="list-item">
+                                            <div class="p-h-30 p-t-30">
+                                                <div class="media-img">
+                                                    <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="title">Erin Gonzales</span>
+                                                    <span class="sub-title">@eringonzales</span>
+                                                    <div class="float-item">
+                                                        <span>7 hrs ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="p-30">
+                                        <p class="m-b-15">What good's a reward if you ain't around to use it?</p>
+                                        <a href="https://wrapbootstrap.com/theme/eastern-creative-multipurpose-template-WB08T2766" target="_blank">
+                                            <div class="card">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-5">
+                                                        <img class="img-fluid img-fit-cover" src="assets/images/others/img-42.jpg" alt="">
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <div class="card-body">
+                                                            <h4 class="m-b-20">Easten - Creative Multipurpose Template</h4>
+                                                            <p>Eastern is a clean and modern HTML5 template, that includes 15+ concepts and ton of UI elements which make the customizations full...</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ul class="list-inline m-t-20 p-v-15">
+                                            <li class="m-r-25">
+                                                <a href="#" class="text-gray font-size-16 ">
+                                                    <i class="ti-heart text-danger p-r-5"></i>
+                                                    <span>168</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-r-20">
+                                                <a href="#" class="text-gray font-size-16">
+                                                    <i class="ti-comments text-success p-r-5"></i>
+                                                    <span>18</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-4">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Notifications</h4>
+                                    <div class="card-body">
+                                        <h4 class="card-title m-b-25">Albums</h4>
+                                        <div class="row">
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-8.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-9.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-10.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-11.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-12.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-13.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-14.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-15.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-4 p-h-5">
+                                                <a href="#">
+                                                    <img class="img-fluid w-100" src="assets/images/others/img-16.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border top p-v-15 p-h-20 text-center">
+                                        <a href="#" class="text-semibold text-dark d-block">More...</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header border bottom">
+                                        <h4 class="card-title">Upcoming Event</h4>
                                         <div class="card-toolbar">
                                             <ul>
                                                 <li>
@@ -1557,80 +1775,173 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="list-media">
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-20">
-                                                <div class="media-img">
-                                                    <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">Marshall Nichols</span>
-                                                    <span class="sub-title">has replied your mails.</span>
-                                                    <span class="float-item font-size-11 p-t-5">8 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-20">
-                                                <div class="media-img">
-                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">Susie Willis</span>
-                                                    <span class="sub-title">commented on your post's</span>
-                                                    <span class="float-item font-size-11 p-t-5">12 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-20">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-gradient-info">
-                                                        <i class="ti-settings"></i>
+                                    <div class="card-body p-t-20">
+                                        <ul class="list-unstyled">
+                                            <li class="p-v-15 border bottom">
+                                                <a href="#">
+                                                    <div class="media">
+                                                        <div class="m-r-20">
+                                                            <img class="img-fluid" src="assets/images/others/img-35.jpg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <h5 class="text-link text-semibold m-b-0 m-t-5">Team Gathering</h5>
+                                                            <p class="text-semibold font-size-13">MAY 11, 2018</p>
+                                                            <p class="font-size-13">Efficiently unleash information </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">System Notifications</span>
-                                                    <span class="sub-title">Your account updated</span>
-                                                    <span class="float-item font-size-11 p-t-5">2 days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-20">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-gradient-success">
-                                                        <i class="mdi mdi-file-outline"></i>
+                                                </a>
+                                            </li>
+                                            <li class="p-v-15">
+                                                <a href="#">
+                                                    <div class="media">
+                                                        <div class="m-r-20">
+                                                            <img class="img-fluid" src="assets/images/others/img-34.jpg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <h5 class="text-link text-semibold m-b-0 m-t-5">Video Conference</h5>
+                                                            <p class="text-semibold font-size-13">MAY 18, 2018</p>
+                                                            <p class="font-size-13">Efficiently unleash information </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">New Attachment</span>
-                                                    <span class="sub-title">3 files has updated</span>
-                                                    <span class="float-item font-size-11 p-t-5">5 days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-20">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-warning">
-                                                        <span>FW</span>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">Franklin Weaver</span>
-                                                    <span class="sub-title">has sent you a message.</span>
-                                                    <span class="float-item font-size-11 p-t-5">10 days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>    
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="p-v-20">
+                                            <img class="img-fluid d-block mx-auto" src="assets/images/others/bell.png" alt="">
+                                            <div class="text-center">
+                                                <h5 class="text-dark font-size-18"><b>Get Notifications</b></h5>
+                                                <p>Climb leg rub face on everything</p>
+                                                <button class="btn btn-info m-t-20">Subscibe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header border bottom">
+                                        <h4 class="card-title">Photos</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row masonry-grid">
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-20.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-20.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-21.jpg" class="gallery-item" data-size="700x1000">
+                                                    <img class="img-fluid" src="assets/images/others/img-21.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-22.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-22.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-23.jpg" class="gallery-item" data-size="700x1000">
+                                                    <img class="img-fluid" src="assets/images/others/img-23.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-24.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-24.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-25.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-25.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-26.jpg" class="gallery-item" data-size="700x1000">
+                                                    <img class="img-fluid" src="assets/images/others/img-26.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-27.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-27.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-28.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-28.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-29.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-29.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-30.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-30.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <figure class="col-md-3 masonry-brick mrg-btm-30">
+                                                <a href="assets/images/others/img-31.jpg" class="gallery-item" data-size="700x500">
+                                                    <img class="img-fluid" src="assets/images/others/img-31.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="border top p-v-15 p-h-20 text-center">
+                                        <a href="#" class="text-semibold text-dark d-block">More...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Content Wrapper END -->
+
+                <!-- photoswipe HTML Start-->
+                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="pswp__bg"></div>
+                    <div class="pswp__scroll-wrap">
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+                        <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar">
+                                <div class="pswp__counter"></div>
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                <button class="pswp__button pswp__button--share" title="Share"></button>
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                        <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                            </button>
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                            </button>
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- photoswipe HTML END-->
 
                 <!-- Footer START -->
                 <footer class="content-footer">
@@ -1652,16 +1963,19 @@
         </div>
     </div>
 
-    <script src="{{ asset('assets/js/vendor.js') }}"></script>
+    <script src="assets/js/vendor.js"></script>
 
-    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+    <script src="assets/js/app.min.js"></script>
 
     <!-- page js -->
-    <script src="{{ asset('assets/vendor/chart.js/dist/Chart.min.js') }}"></script>
-    <script src="{{ asset('assets/js/dashboard/bank.js') }}"></script>
+    <script src="assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.js"></script>
+    <script src="assets/vendor/photoswipe/dist/photoswipe.js"></script>
+    <script src="assets/vendor/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/extras/gallery.js"></script>
     
 </body>
 
 
-<!-- Mirrored from themenate.com/applicator/dist/index-bank.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:00:22 GMT -->
+<!-- Mirrored from themenate.com/applicator/dist/widgets-media.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:05:48 GMT -->
 </html>
