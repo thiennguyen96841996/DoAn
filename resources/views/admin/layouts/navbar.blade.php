@@ -135,7 +135,24 @@
                         <i class="fa fa-male"></i>
                     </span>
                     <span class="title">Quản lí người dùng</span>
+                    <span class="arrow">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
                 </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="email.html">
+                        <span class="icon-holder">
+                            <i class="fa fa-users"></i>
+                        </span>Bộ phận</a>
+                    </li>
+                    <li>
+                        <a href="email.html">
+                        <span class="icon-holder">
+                            <i class="fa fa-user-circle-o"></i>
+                        </span>Tài khoản</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
