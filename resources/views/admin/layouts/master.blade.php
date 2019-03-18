@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="_token" content="{{csrf_token()}}" />
     <title>@yield('title')</title>
 
     <!-- Favicon -->
@@ -23,6 +24,7 @@
     <link href="{{ asset('assets/css/materialdesignicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/mystyle.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -64,11 +66,42 @@
         </div>
     </div>
     <script src="{{ asset('assets/js/vendor.js') }}"></script>
-
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <!-- page js -->
     @yield('JsPage')
     
+    <script src="{{ asset('assets/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            @if (Session::has('success'))
+                $.notify(
+                {
+                    icon: 'mdi mdi-check-circle-outline',
+                    message: '{{ Session('success') }}'
+                }, {
+                    type: 'success',
+                    timer: 1000,
+                    placement: {
+                        from: 'bottom',
+                        align: 'right'
+                    }
+                });
+            @elseif (Session::has('error'))
+                $.notify(
+                {
+                    icon: 'mdi mdi-close-circle-outline',
+                    message: '{{ Session('error') }}'
+                }, {
+                    type: 'danger',
+                    timer: 1000,
+                    placement: {
+                        from: 'bottom',
+                        align: 'right'
+                    }
+                });
+            @endif
+        });
+    </script>
 </body>
 </html>
