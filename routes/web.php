@@ -29,4 +29,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('admin.logout');
     Route::get('register', 'Auth\RegisterController@showRegistrationForm');
     Route::post('register', 'Auth\RegisterController@register')->name('admin.register');
+    Route::resource('user', 'User\UserController', ['except' => 'show']);
+    Route::resource('department', 'User\DepartmentController', ['except' => 'show', 'destroy']);
+    Route::resource('product', 'ProductController');
+    Route::resource('category', 'CategoryController', ['except' => 'show', 'destroy']);
+    Route::delete('image/{id}', 'ProductController@deleteImage')->name('admin.image');
 });

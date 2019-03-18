@@ -24,7 +24,13 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('category.index') }}">
+                        <span class="icon-holder">
+                            <i class="fa fa-newspaper-o"></i>
+                        </span>Chủng loại</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('product.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-th"></i>
                         </span>Danh mục</a>
@@ -141,13 +147,13 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('department.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-users"></i>
                         </span>Bộ phận</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('user.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-user-circle-o"></i>
                         </span>Tài khoản</a>
