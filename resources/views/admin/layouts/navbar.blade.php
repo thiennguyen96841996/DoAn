@@ -76,7 +76,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('customer.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-user-circle"></i>
                         </span>Khách hàng</a>

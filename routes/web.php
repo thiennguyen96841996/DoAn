@@ -34,4 +34,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('product', 'ProductController');
     Route::resource('category', 'CategoryController', ['except' => 'show', 'destroy']);
     Route::delete('image/{id}', 'ProductController@deleteImage')->name('admin.image');
+    Route::resource('customer', 'CustomerController', ['except' => 'show']);
 });

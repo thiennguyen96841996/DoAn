@@ -194,14 +194,14 @@ user
   //          });
 	});
 	$('#modal-lg').on('show.bs.modal', function(e) {
-			var value = $(e.relatedTarget).data('value');
-			$('#avatar').attr('src', '/assets/avatar/' + value.avatar);
-			$('#name').text(value.name);
-			$('#email').text(value.email);
-			$('#phone').text(value.phone);
-			$('#birthday').text(value.birth_day);
-			$('#sex').text(value.sex);
-			$('#address').text(value.address);
-		});
+		var value = $(e.relatedTarget).data('value');
+		$('#avatar').attr('src', '/assets/avatar/' + value.avatar);
+		$('#name').text(value.name);
+		$('#email').text(value.email);
+		$('#phone').text(value.phone);
+		$('#birthday').text(value.birth_day);
+		$('#sex').text(value.sex);
+		$('#address').text(value.address);
+	});
 </script>
 @endsection

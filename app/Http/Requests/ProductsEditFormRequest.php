@@ -26,9 +26,9 @@ class ProductsEditFormRequest extends FormRequest
         return [
             'name' => 'required', 
             'purchase_price' => 'required|integer',
-            'sale_price '=> 'required|integer',
+            'sale_price'=> 'required|integer',
             'unit' => 'required', 
-            'quantity' => 'required|integer',
+            'quantity' => 'required|integer'
         ];
     }
 }
