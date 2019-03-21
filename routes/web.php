@@ -35,4 +35,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('category', 'CategoryController', ['except' => 'show', 'destroy']);
     Route::delete('image/{id}', 'ProductController@deleteImage')->name('admin.image');
     Route::resource('customer', 'CustomerController', ['except' => 'show']);
+    Route::resource('producer', 'ProducerController', ['except' => 'show']);
+    Route::resource('supplierGroup', 'SupplierGroupController', ['except' => 'show', 'create', 'destroy']);
+    Route::post('group', 'ProducerController@createGroup')->name('groupncc');
 });

@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class SupplierGroup extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = [
+        'name',
+        'info',
+        'status'
+    ];
+
+    public function supplier() {
+    	return $this->hasMany(Supplier::class);
+    }
 }
