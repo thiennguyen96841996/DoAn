@@ -82,7 +82,7 @@
                         </span>Khách hàng</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('producer.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-undo"></i>
                         </span>Nhà cung cấp</a>
