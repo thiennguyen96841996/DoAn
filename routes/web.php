@@ -38,4 +38,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('producer', 'ProducerController', ['except' => 'show']);
     Route::resource('supplierGroup', 'SupplierGroupController', ['except' => 'show', 'create', 'destroy']);
     Route::post('group', 'ProducerController@createGroup')->name('groupncc');
+    Route::resource('table', 'TableController');
+    Route::resource('tableGroup', 'TableGroupController', ['except' => 'show', 'create', 'destroy']);
 });
