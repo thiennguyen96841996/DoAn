@@ -42,8 +42,25 @@
                     <span class="icon-holder">
                         <i class="fa fa-table"></i>
                     </span>
-                    <span class="title">Phòng/Bàn</span>
+                    <span class="title">Phòng/bàn</span>
+                    <span class="arrow">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
                 </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('table.index') }}">
+                        <span class="icon-holder">
+                            <i class="fa fa-table"></i>
+                        </span>Bàn</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('tableGroup.index') }}">
+                        <span class="icon-holder">
+                            <i class="fa fa-undo"></i>
+                        </span>Nhóm/tầng</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
