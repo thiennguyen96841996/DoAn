@@ -77,7 +77,13 @@
                         <a href="email.html">
                         <span class="icon-holder">
                             <i class="fa fa-wpforms"></i>
-                        </span>Hóa đơn</a>
+                        </span>Hóa đơn bàn</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dealProduct.index') }}">
+                        <span class="icon-holder">
+                            <i class="fa fa-wpforms"></i>
+                        </span>Hóa đơn nhập hàng</a>
                     </li>
                 </ul>
             </li>
