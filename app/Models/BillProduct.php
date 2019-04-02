@@ -8,4 +8,28 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class BillProduct extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = [
+        'user_id',
+        'quantity',
+        'total',
+        'supplier_id',
+        'date',
+    ];
+
+    public function supplier(){
+    	return $this->belongsTo(Supplier::class);
+    }
+
+    public function product(){
+    	return $this->hasMany(Product::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function billProductDetail(){
+        return $this->hasMany(BillProductDetail::class);
+    }
 }

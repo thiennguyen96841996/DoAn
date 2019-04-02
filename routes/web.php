@@ -40,4 +40,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('group', 'ProducerController@createGroup')->name('groupncc');
     Route::resource('table', 'TableController');
     Route::resource('tableGroup', 'TableGroupController', ['except' => 'show', 'create', 'destroy']);
+    Route::resource('dealProduct', 'DealProductController', ['except' => 'edit', 'update', 'destroy']);
+    Route::post('getProduct', 'DealProductController@getProduct')->name('getProduct');
 });
