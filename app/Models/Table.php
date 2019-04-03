@@ -17,6 +17,10 @@ class Table extends Model
         'table_group_id',
     ];
 
+    const HOATDONG = 0;
+    const BAOTRI = 1;
+    const DANGSUDUNG = 2;
+
     public function tableGroup() {
     	return $this->belongsTo(TableGroup::class);
     }
