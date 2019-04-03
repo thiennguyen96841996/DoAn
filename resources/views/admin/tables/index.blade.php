@@ -67,10 +67,6 @@ bàn
                                 <td>{{ str_limit($value->info, 10) }}</td>
                                 <td class="text-center font-size-18">
                                     <a href="{{ route('table.edit', $value->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                                    @if($value->status == 2)
-                                    @else
-                                    <a data-toggle="modal" data-target="#basic-modal" data-url="{{ route('table.destroy', $value->id) }}" class="text-gray"><i class="ti-trash"></i></a>
-                                    @endif
                                 </td>
                             </tr>
                             @endforeach
@@ -78,32 +74,6 @@ bàn
                     </table>
                 </div> 
             </div>       
-        </div>
-    </div>
-    <div class="modal fade" id="basic-modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div>
-                        <h4 class="d-flex align-items-center h-100 head">Bạn chắc chắn muốn xóa</h4>
-                    </div>
-                    <div class="container text-center">
-                        <div class="text-center font-size-70">
-                            <i class="mdi mdi-checkbox-marked-circle-outline icon-gradient-success"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer no-border">
-                    <div class="modal_button">
-                        <div class="row"> 
-                            {{ Form::button(__('cancel'), ['class' =>'btn btn-default', 'data-dismiss' => 'modal']) }}
-                            {!! Form::open(['id' => 'del-form', 'method' => 'delete']) !!}
-                                {{ Form::submit(__('delete'), ['class' =>'btn btn-danger']) }}
-                            {!! Form::close() !!}
-                        </div>
-                    </div> 
-                </div>
-            </div>
         </div>
     </div>
     <div class="modal fade" id="modal-lg">
