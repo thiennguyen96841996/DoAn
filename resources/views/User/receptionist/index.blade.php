@@ -71,9 +71,11 @@
 												<td>{{ $value->people_number }}</td>
 												<td>{{ $value->table->name }}</td>
 												<td>@if ($value->status == 0)
-				                                    <span class="badge badge-gradient-info">đang chờ</span>
+				                                    <span class="badge badge-gradient-info">đã xếp bàn</span>
 				                                    @elseif ($value->status == 1)
-				                                    <span class="badge badge-gradient-success">đã xếp bàn</span>
+				                                    <span class="badge badge-gradient-success">đã nhận bàn</span>
+				                                    @elseif ($value->status == 2)
+				                                    <span class="badge badge-gradient-warning">quá giờ</span>
 				                                    @else
 				                                    <span class="badge badge-gradient-danger">hủy đặt</span>
 				                                    @endif

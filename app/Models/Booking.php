@@ -19,9 +19,10 @@ class Booking extends Model
         'info',
     ];
 
-    const DANGCHO = 0;
-    const DAXEPBAN = 1;
-    const HUYDAT = 2;
+    const DAXEPBAN = 0;
+    const DANHANBAN = 1;
+    const QUAGIO = 3;
+    const DATHANHTOAN = 2;
 
     public function customer(){
         return $this->belongsTo(Customer::class);

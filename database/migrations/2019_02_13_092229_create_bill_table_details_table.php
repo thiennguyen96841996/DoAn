@@ -17,7 +17,6 @@ class CreateBillTableDetailsTable extends Migration
             $table->increments('id');
             $table->integer('bill_table_id');
             $table->integer('product_id');
-            $table->integer('single_price');
             $table->integer('quantity');
             $table->integer('total');
             $table->SoftDeletes();
