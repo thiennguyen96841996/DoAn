@@ -17,6 +17,7 @@ class Product extends Model
 	    'unit',
 	    'quantity',
 	    'category_id',
+        'img',
     ];
 
     public function images() {
@@ -25,5 +26,10 @@ class Product extends Model
 
     public function category() {
     	return $this->belongsTo(Category::class);
+    }
+
+    public function getOneImage($id) {
+        $image = Image::where('product_id', $id)->first();
+        return $image->name;
     }
 }

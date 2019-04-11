@@ -47,3 +47,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], function () {
     Route::resource('booking', 'BookingController', ['except' => 'destroy', 'show']);
 });
+
+Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function () {
+    Route::resource('menu', 'MenuController');
+    Route::post('getBooking', 'MenuController@getBooking')->name('getBooking');
+    Route::post('getTable', 'MenuController@getTable')->name('getTable');
+    Route::post('getMenu', 'MenuController@getMenu')->name('getMenu');
+    Route::post('getDetailBill', 'MenuController@getDetailBill')->name('getDetailBill');
+});

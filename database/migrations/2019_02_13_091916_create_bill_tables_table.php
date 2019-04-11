@@ -18,7 +18,6 @@ class CreateBillTablesTable extends Migration
             $table->datetime('date');
             $table->integer('customer_id');
             $table->integer('status');
-            $table->integer('table_id');
             $table->integer('user_id');
             $table->integer('booking_id');
             $table->integer('paymented');

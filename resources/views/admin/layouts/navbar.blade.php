@@ -76,7 +76,7 @@
                     <li>
                         <a href="email.html">
                         <span class="icon-holder">
-                            <i class="fa fa-wpforms"></i>
+                            <i class="fa fa-calendar-o"></i>
                         </span>Hóa đơn bàn</a>
                     </li>
                     <li>

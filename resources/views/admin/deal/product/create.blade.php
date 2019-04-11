@@ -154,7 +154,7 @@ giao dịch hàng hóa
                     })
                     
                 } else {
-                    alert('Sản phẩm này bạn đã chọn');
+                    alertSucces('Sản phẩm này bạn đã chọn', 'mdi mdi-close-circle-outline', 'danger');
                 }
             },
         });
@@ -176,6 +176,21 @@ giao dịch hàng hóa
             priceId += parseInt($(this).text());
             $('#pricetotal').text(priceId);
             $('#totalvalue').attr('value', priceId);
+        });
+    }
+
+    function alertSucces(message, icon, status){
+        $.notify(
+        {
+            icon: icon,
+            message: message
+        }, {
+            type: status,
+            timer: 1000,
+            placement: {
+                from: 'bottom',
+                align: 'right'
+            }
         });
     }
 </script>

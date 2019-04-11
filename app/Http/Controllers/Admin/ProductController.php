@@ -54,6 +54,7 @@ class ProductController extends Controller
             'category_id' => $request->categories,
         ]);
         $product->save();
+        
         if($request->hasFile('image')) {
             foreach($request->image as $image) {
                 $filename = $image->getClientOriginalName();
@@ -66,7 +67,9 @@ class ProductController extends Controller
                 
                 $image->save();
             }
+            $product->img = $filename;
         }
+        $product->save();
         return redirect()->route('product.index')->with('success', 'thêm sản phẩm thành công');
     }
 
