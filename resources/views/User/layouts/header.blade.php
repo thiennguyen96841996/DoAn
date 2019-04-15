@@ -9,13 +9,8 @@
             </li>
             @elseif(Auth::user()->department_id == 2)
             <li>
-                <a class="sidenav" href="#">
-                    <i class="fa fa-menu">Danh sách đặt bàn</i>
-                </a>
-            </li>
-            <li>
-                <a class="sidenav" href="#">
-                    <i class="fa fa-menu">Phòng/Bàn</i>
+                <a class="sidenav" href="{{ route('cashier.table') }}">
+                    <i class="fa fa-menu">Phòng Bàn</i>
                 </a>
             </li>
             <li>

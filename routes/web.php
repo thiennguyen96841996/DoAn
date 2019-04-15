@@ -54,4 +54,6 @@ Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function ()
     Route::post('getTable', 'MenuController@getTable')->name('getTable');
     Route::post('getMenu', 'MenuController@getMenu')->name('getMenu');
     Route::post('getDetailBill', 'MenuController@getDetailBill')->name('getDetailBill');
+    Route::get('table', 'TableController@index')->name('cashier.table');
+    Route::post('cashier-table', 'TableController@getTable')->name('cashier.getTable');
 });
