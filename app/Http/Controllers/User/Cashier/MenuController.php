@@ -58,7 +58,7 @@ class MenuController extends Controller
         $data->save();
         $billDetails = array();
         for($i = 0; $i < $request->count; $i++){
-            $billDetail = new BillTableDetail(array('quantity' => $quantityunit[$i], 'total' => $unittotal[$i], 'product_id' => $product_id[$i], 'bill_table_id' => $data->id));
+            $billDetail = new BillTableDetail(array('quantity' => $quantityunit[$i], 'total' => $unittotal[$i], 'product_id' => $product_id[$i], 'bill_table_id' => $data->id, 'status' => 0));
             $billDetail->save();
             $billDetails[] = $billDetail;
             $product = Product::where('id', $product_id[$i])->first();

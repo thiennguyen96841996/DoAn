@@ -57,3 +57,8 @@ Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function ()
     Route::get('table', 'TableController@index')->name('cashier.table');
     Route::post('cashier-table', 'TableController@getTable')->name('cashier.getTable');
 });
+
+Route::group(['prefix' => 'chief', 'namespace' => 'User\chief'], function () {
+    Route::get('index', 'ChiefController@index')->name('chief.index');
+    Route::post('postQuantity', 'ChiefController@postQuantity')->name('chief.postQuantity');
+});

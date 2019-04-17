@@ -19,6 +19,11 @@
                 </a>
             </li>
             @elseif(Auth::user()->department_id == 3)
+            <li>
+                <a class="sidenav" href="{{ route('chief.index') }}">
+                    <i class="fa fa-menu">Chế biến</i>
+                </a>
+            </li>
             @else
             @endif
         </ul>
