@@ -12,6 +12,11 @@ class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
 
+    const LETAN = 4;
+    const QUANLI = 1;
+    const BEP = 3;
+    const THUNGAN = 2;
+
     /**
      * The attributes that are mass assignable.
      *
