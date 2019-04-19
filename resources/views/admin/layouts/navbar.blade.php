@@ -124,7 +124,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('admin.sell') }}">
                         <span class="icon-holder">
                             <i class="fa fa-file-o"></i>
                         </span>Bán hàng</a>

@@ -43,6 +43,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('dealProduct', 'DealProductController', ['except' => 'edit', 'update', 'destroy']);
     Route::post('getProduct', 'DealProductController@getProduct')->name('getProduct');
     Route::resource('billTable', 'BillTableController', ['except' => 'store', 'create', 'destroy', 'edit', 'update']);
+    Route::get('sell', 'ReportController@sell')->name('admin.sell');
+    Route::post('getSell', 'ReportController@getSell')->name('getSell');
 });
 
 Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], function () {

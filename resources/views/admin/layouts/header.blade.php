@@ -79,7 +79,7 @@
                                 <li class="list-item">
                                     <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                         <div class="media-img">
-                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                            <img src="" alt="">
                                         </div>
                                         <div class="info">
                                             <span class="title p-t-10">Debra Stewart</span>
@@ -89,7 +89,7 @@
                                 <li class="list-item">
                                     <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                         <div class="media-img">
-                                            <img src="assets/images/avatars/thumb-5.jpg" alt="">
+                                            <img src="" alt="">
                                         </div>
                                         <div class="info">
                                             <span class="title p-t-10">Jane Hunt</span>
