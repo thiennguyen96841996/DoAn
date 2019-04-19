@@ -130,7 +130,7 @@
                         </span>Bán hàng</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('admin.products') }}">
                         <span class="icon-holder">
                             <i class="fa fa-cubes"></i>
                         </span>Hàng hóa</a>
