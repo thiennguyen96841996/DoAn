@@ -74,7 +74,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('billTable.index') }}">
                         <span class="icon-holder">
                             <i class="fa fa-calendar-o"></i>
                         </span>Hóa đơn bàn</a>

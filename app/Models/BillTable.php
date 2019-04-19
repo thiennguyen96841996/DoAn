@@ -20,4 +20,16 @@ class BillTable extends Model
         'booking_id',
         'paymented',
     ];
+
+    public function customer(){
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function billTableDetails(){
+        return $this->hasMany(BillTableDetail::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
