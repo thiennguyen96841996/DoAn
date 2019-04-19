@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-báo cáo bán hàng
+báo cáo sản phẩm
 @endsection
 @section('CssPage')
 <link rel="stylesheet" href="{{ asset('assets/vendor/chartist-js/dist/chartist.min.css') }}" />
@@ -11,11 +11,11 @@ báo cáo bán hàng
         <div class="row">
             <div class="col-md-8">
                 <div class="page-header">
-                    <h2 class="header-title">Báo cáo bán hàng</h2>
+                    <h2 class="header-title">Báo cáo sản phẩm</h2>
                     <div class="header-sub-title">
                         <nav class="breadcrumb breadcrumb-dash">
                             <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Trang chủ</a>
-                            <a class="breadcrumb-item" href="{{ route('admin.sell') }}">Báo cáo bán hàng</a>
+                            <a class="breadcrumb-item" href="{{ route('admin.products') }}">Báo cáo sản phẩm</a>
                             <span class="breadcrumb-item active">Báo cáo</span>
                         </nav>
                     </div>
@@ -24,15 +24,15 @@ báo cáo bán hàng
         </div>
         <div class="card">
             <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-10 offset-md-3">
+                <div class="col-md-8 offset-md-5">
                     <div class="m-t-25">
                     </div>
-                    <ul class="nav nav-pills" role="tablist" id="date">
+                    <ul class="nav nav-pills" role="tablist" id="menu">
                         <li class="nav-item">
-                            <input type="date" name="day" placeholder="theo ngày" class="nav-link btn btn-default btn-rounded btn-float" id="day">
+                            <a class="nav-link btn btn-default btn-rounded btn-float active" role="tab" id="0" data-toggle="tab">Doanh số</a>
                         </li>
                         <li class="nav-item">
-                            <input type="month" name="day" placeholder="theo tháng" class="nav-link btn btn-default btn-rounded btn-float" id="month">
+                            <a class="nav-link btn btn-default btn-rounded btn-float" role="tab" id="1" data-toggle="tab">Số lượng</a>
                         </li>
                     </ul>
                 </div>
@@ -46,46 +46,37 @@ báo cáo bán hàng
 @section('JsPage')
 <script src="{{ asset('assets/vendor/chartist-js/dist/chartist.min.js') }}"></script>
 <script type="text/javascript">
-    $('#date input').change(function(){
-        var value = $(this).val();
+    $('#menu a').click(function(){
         var id = $(this).attr('id');
-        console.log(value);
         $.ajax({
             type: 'post',
-            url: "{{ route('getSell') }}",
+            url: "{{ route('getProducts') }}",
             data: {
                 '_token': $('input[name=_token]').val(),
-                'date': value,
-                'title': id
+                'id': id
             },
             success: function(data) {
                 if(data != 0){
                     $('#head-report').text("Báo cáo doanh thu");
-                    $('.ct-chart').attr('id', 'stacked-bar');
+                    $('.ct-chart').attr('id', 'horizontal-bar');
                     Length = data.length;
                     var label = [];
                     var total = [];
                     for(var i=0; i<Length; i++) {
-                        label[i] = data[i].date;
-                        total[i] = data[i].paymented;
+                        label[i] = data[i].name;
+                        total[i] = data[i].sum;
                     }
-                    new Chartist.Bar('#stacked-bar', {
+                    new Chartist.Bar('#horizontal-bar', {
                         labels: label,
                         series: [
                             total,
                         ]
                     }, {
-                        stackBars: true,
+                        seriesBarDistance: 10,
+                        reverseData: true,
+                        horizontalBars: true,
                         axisY: {
-                            labelInterpolationFnc: function(value) {
-                                return (value / 1000) + 'k';
-                            }
-                        }
-                    }).on('draw', function(data) {
-                        if(data.type === 'bar') {
-                            data.element.attr({
-                                style: 'stroke-width: 30px'
-                            });
+                            offset: 70
                         }
                     });
                 } else {
