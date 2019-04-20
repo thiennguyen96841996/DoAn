@@ -136,7 +136,7 @@
                         </span>Hàng hóa</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('admin.producers') }}">
                         <span class="icon-holder">
                             <i class="fa fa-undo"></i>
                         </span>Nhà cung cấp</a>
