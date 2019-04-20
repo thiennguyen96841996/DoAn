@@ -86,4 +86,29 @@ class ReportController extends Controller
         ->get();
         return response()->json($data);
     }
+
+    public function employee() {
+        return view('admin.report.employee');
+    }
+
+    public function getEmployees() {
+        $data = BillTable::groupBy('bill_tables.user_id', 'users.name')
+        ->selectRaw('users.name as nameuser, bill_tables.user_id, sum(bill_table_details.total) as sum')
+        ->join('users', 'users.id', '=', 'bill_tables.user_id')
+        ->join('bill_table_details', 'bill_table_details.bill_table_id', '=', 'bill_tables.id')
+        ->limit(10)
+        ->get();
+        return response()->json($data);
+    }
+
+    public function getEmployeesByMonth(Request $request) {
+        $data = BillTable::groupBy('bill_tables.user_id', 'users.name')
+        ->selectRaw('users.name as nameuser, bill_tables.user_id, sum(bill_table_details.total) as sum')
+        ->join('users', 'users.id', '=', 'bill_tables.user_id')
+        ->join('bill_table_details', 'bill_table_details.bill_table_id', '=', 'bill_tables.id')
+        ->where('date', 'like', '%'.$request->date.'%')
+        ->limit(10)
+        ->get();
+        return response()->json($data);
+    }
 }
