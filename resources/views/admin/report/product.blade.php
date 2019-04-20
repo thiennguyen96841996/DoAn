@@ -26,7 +26,12 @@ báo cáo sản phẩm
             <div class="row" style="margin-bottom: 20px;">
                 <div class="col-md-8 offset-md-5">
                     <div class="m-t-25">
+                        Báo cáo doanh thu sản phẩm
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-4">
                     <ul class="nav nav-pills" role="tablist" id="menu">
                         <li class="nav-item">
                             <a class="nav-link btn btn-default btn-rounded btn-float active" role="tab" id="0" data-toggle="tab">Doanh số</a>
@@ -57,7 +62,6 @@ báo cáo sản phẩm
             },
             success: function(data) {
                 if(data != 0){
-                    $('#head-report').text("Báo cáo doanh thu");
                     $('.ct-chart').attr('id', 'horizontal-bar');
                     Length = data.length;
                     var label = [];
@@ -83,6 +87,43 @@ báo cáo sản phẩm
                     $('#head-report').html("<b style = 'color:red;'>Không có doanh thu :((</b>");
                     $('.ct-chart').html('');
                 }
+            },
+            error(data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $( document ).ready(function() {
+        $.ajax({
+            type: 'get',
+            url: "{{ route('getProductByMonth') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                console.log(data);
+                $('.ct-chart').attr('id', 'horizontal-bar');
+                Length = data.length;
+                var label = [];
+                var total = [];
+                for(var i=0; i<Length; i++) {
+                    label[i] = data[i].name;
+                    total[i] = data[i].sum;
+                }
+                new Chartist.Bar('#horizontal-bar', {
+                    labels: label,
+                    series: [
+                        total,
+                    ]
+                }, {
+                    seriesBarDistance: 10,
+                    reverseData: true,
+                    horizontalBars: true,
+                    axisY: {
+                        offset: 70
+                    }
+                });
             },
             error(data) {
                 console.log(data);

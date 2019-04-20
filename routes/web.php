@@ -45,8 +45,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('billTable', 'BillTableController', ['except' => 'store', 'create', 'destroy', 'edit', 'update']);
     Route::get('sell', 'ReportController@sell')->name('admin.sell');
     Route::post('getSell', 'ReportController@getSell')->name('getSell');
+    Route::get('getSellByMonth', 'ReportController@getSellByMonth')->name('getSellByMonth');
     Route::get('products', 'ReportController@product')->name('admin.products');
     Route::post('getProducts', 'ReportController@getProduct')->name('getProducts');
+    Route::get('getProductByMonth', 'ReportController@getProductByMonth')->name('getProductByMonth');
     Route::get('customers', 'ReportController@customer')->name('admin.customers');
     Route::get('getCustomers', 'ReportController@getCustomers')->name('getCustomers');
     Route::post('getCustomersByMonth', 'ReportController@getCustomersByMonth')->name('getCustomersByMonth');
