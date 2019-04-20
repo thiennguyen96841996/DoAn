@@ -24,9 +24,14 @@ báo cáo bán hàng
         </div>
         <div class="card">
             <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-10 offset-md-3">
+                <div class="col-md-10 offset-md-4">
                     <div class="m-t-25">
+                        Báo cáo doanh thu
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-3">
                     <ul class="nav nav-pills" role="tablist" id="date">
                         <li class="nav-item">
                             <input type="date" name="day" placeholder="theo ngày" class="nav-link btn btn-default btn-rounded btn-float" id="day">
@@ -60,7 +65,6 @@ báo cáo bán hàng
             },
             success: function(data) {
                 if(data != 0){
-                    $('#head-report').text("Báo cáo doanh thu");
                     $('.ct-chart').attr('id', 'stacked-bar');
                     Length = data.length;
                     var label = [];
@@ -89,9 +93,52 @@ báo cáo bán hàng
                         }
                     });
                 } else {
-                    $('#head-report').html("<b style = 'color:red;'>Không có doanh thu :((</b>");
+                    $('#head-report').html("<b style = 'color:red;'>Không có doanh thu</b>");
                     $('.ct-chart').html('');
                 }
+            },
+            error(data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $( document ).ready(function() {
+        $.ajax({
+            type: 'get',
+            url: "{{ route('getSellByMonth') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                console.log(data);
+                $('.ct-chart').attr('id', 'stacked-bar');
+                    Length = data.length;
+                    var label = [];
+                    var total = [];
+                    for(var i=0; i<Length; i++) {
+                        label[i] = data[i].date;
+                        total[i] = data[i].paymented;
+                    }
+                    new Chartist.Bar('#stacked-bar', {
+                        labels: label,
+                        series: [
+                            total,
+                        ]
+                    }, {
+                        stackBars: true,
+                        axisY: {
+                            labelInterpolationFnc: function(value) {
+                                return (value / 1000) + 'k';
+                            }
+                        }
+                    }).on('draw', function(data) {
+                        if(data.type === 'bar') {
+                            data.element.attr({
+                                style: 'stroke-width: 30px'
+                            });
+                        }
+                    });
             },
             error(data) {
                 console.log(data);
