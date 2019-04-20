@@ -142,7 +142,7 @@
                         </span>Nhà cung cấp</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('admin.customers') }}">
                         <span class="icon-holder">
                             <i class="fa fa-user-circle"></i>
                         </span>Khách hàng</a>

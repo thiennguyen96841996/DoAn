@@ -35,4 +35,29 @@ class ReportController extends Controller
         }
         return response()->json($data);
     }
+
+    public function customer() {
+        return view('admin.report.customer');
+    }
+
+    public function getCustomers() {
+        $data = BillTable::groupBy('bill_tables.customer_id', 'customers.name')
+        ->selectRaw('customers.name as namecustomer, bill_tables.customer_id, sum(bill_table_details.total) as sum')
+        ->join('customers', 'customers.id', '=', 'bill_tables.customer_id')
+        ->join('bill_table_details', 'bill_table_details.bill_table_id', '=', 'bill_tables.id')
+        ->limit(4)
+        ->get();
+        return response()->json($data);
+    }
+
+    public function getCustomersByMonth(Request $request) {
+        $data = BillTable::groupBy('bill_tables.customer_id', 'customers.name')
+        ->selectRaw('customers.name as namecustomer, bill_tables.customer_id, sum(bill_table_details.total) as sum')
+        ->join('customers', 'customers.id', '=', 'bill_tables.customer_id')
+        ->join('bill_table_details', 'bill_table_details.bill_table_id', '=', 'bill_tables.id')
+        ->where('date', 'like', '%'.$request->date.'%')
+        ->limit(4)
+        ->get();
+        return response()->json($data);
+    }
 }
