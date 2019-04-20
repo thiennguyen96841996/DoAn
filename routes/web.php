@@ -53,6 +53,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('producers', 'ReportController@producer')->name('admin.producers');
     Route::get('getProducers', 'ReportController@getProducers')->name('getProducers');
     Route::post('getProducersByMonth', 'ReportController@getProducersByMonth')->name('getProducersByMonth');
+    Route::get('employee', 'ReportController@employee')->name('admin.employee');
+    Route::get('getEmployees', 'ReportController@getEmployees')->name('getEmployees');
+    Route::post('getEmployeesByMonth', 'ReportController@getEmployeesByMonth')->name('getEmployeesByMonth');
 });
 
 Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], function () {

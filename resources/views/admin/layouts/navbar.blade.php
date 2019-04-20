@@ -148,7 +148,7 @@
                         </span>Khách hàng</a>
                     </li>
                     <li>
-                        <a href="email.html">
+                        <a href="{{ route('admin.employee') }}">
                         <span class="icon-holder">
                             <i class="fa fa-male"></i>
                         </span>Nhân viên</a>
