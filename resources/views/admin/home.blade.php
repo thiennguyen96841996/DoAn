@@ -101,21 +101,23 @@ home
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">TOP 10 HÀNG HÓA BÁN CHẠY 7 NGÀY QUA</h4>
+                        <h4 class="card-title">TOP 10 HÀNG HÓA BÁN CHẠY THÁNG NÀY</h4>
                         <div class="card-toolbar">
-                            <ul>
-                                <li>
-                                    <a class="text-gray" href="javascript:void(0)">
-                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown">
+                                    <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                </a>
+                                <div class="dropdown-menu" id="product">
+                                    <a class="dropdown-item" id="0">Theo doanh thu</a>
+                                    <a class="dropdown-item" id="1">Theo số lượng</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <ul class="list-inline">
+                                <!-- <ul class="list-inline">
                                     <li class="m-r-20">
                                         <a href="#" class="text-semibold text-gray">Today</a>
                                     </li>
@@ -128,9 +130,9 @@ home
                                     <li class="m-r-20">
                                         <a href="#" class="text-semibold text-gray active">1 Month</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="m-t-20">
-                                    <div class="ct-chart" id="horizontal-bar"></div>
+                                    <div class="ct-chart product"></div>
                                 </div>
                             </div>
                         </div>
@@ -195,4 +197,86 @@ home
 @section('JsPage')
 <script src="{{ asset('assets/vendor/chartist-js/dist/chartist.min.js') }}"></script>
 <script src="{{ asset('assets/js/charts/chartist.js') }}"></script>
+<script type="text/javascript">
+    $('#product a').click(function(){
+        id = $(this).attr('id');
+        console.log(id);
+        $.ajax({
+            type: 'post',
+            url: "{{ route('home.product') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+                'id': id
+            },
+            success: function(data) {
+                if(data != 0){
+                    $('.product').attr('id', 'horizontal-bar');
+                    Length = data.length;
+                    var label = [];
+                    var total = [];
+                    for(var i=0; i<Length; i++) {
+                        label[i] = data[i].name;
+                        total[i] = data[i].sum;
+                    }
+                    new Chartist.Bar('#horizontal-bar', {
+                        labels: label,
+                        series: [
+                            total,
+                        ]
+                    }, {
+                        seriesBarDistance: 10,
+                        reverseData: true,
+                        horizontalBars: true,
+                        axisY: {
+                            offset: 70
+                        }
+                    });
+                } else {
+                    $('#head-report').html("<b style = 'color:red;'>Không có doanh thu :((</b>");
+                    $('.ct-chart').html('');
+                }
+            },
+            error(data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $( document ).ready(function() {
+        $.ajax({
+            type: 'get',
+            url: "{{ route('home.getProductByMonth') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                console.log(data);
+                $('.product').attr('id', 'horizontal-bar');
+                Length = data.length;
+                var label = [];
+                var total = [];
+                for(var i=0; i<Length; i++) {
+                    label[i] = data[i].name;
+                    total[i] = data[i].sum;
+                }
+                new Chartist.Bar('#horizontal-bar', {
+                    labels: label,
+                    series: [
+                        total,
+                    ]
+                }, {
+                    seriesBarDistance: 10,
+                    reverseData: true,
+                    horizontalBars: true,
+                    axisY: {
+                        offset: 70
+                    }
+                });
+            },
+            error(data) {
+                console.log(data);
+            }
+        });
+    });
+</script>
 @endsection
