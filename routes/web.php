@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('getEmployeesByMonth', 'ReportController@getEmployeesByMonth')->name('getEmployeesByMonth');
     Route::post('homeProducts', 'HomeController@product')->name('home.product');
     Route::get('homeProductsByMonth', 'HomeController@getProductByMonth')->name('home.getProductByMonth');
+    Route::get('revenueByDay', 'HomeController@revenueByDay')->name('home.revenueByDay');
 });
 
 Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], function () {

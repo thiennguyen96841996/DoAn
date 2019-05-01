@@ -66,19 +66,21 @@ home
                     <div class="card-header">
                         <h4 class="card-title">Doanh số hôm nay</h4>
                         <div class="card-toolbar">
-                            <ul>
-                                <li>
-                                    <a class="text-gray" href="javascript:void(0)">
-                                        <i class="mdi mdi-dots-vertical font-size-20"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown">
+                                    <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                </a>
+                                <div class="dropdown-menu" id="price">
+                                    <a class="dropdown-item" id="0">Hôm nay</a>
+                                    <a class="dropdown-item" id="1">Tháng này</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <ul class="list-inline">
+                                <!-- <ul class="list-inline">
                                     <li class="m-r-20">
                                         <a href="#" class="text-semibold text-gray">Today</a>
                                     </li>
@@ -91,9 +93,9 @@ home
                                     <li class="m-r-20">
                                         <a href="#" class="text-semibold text-gray active">1 Month</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="m-t-20">
-                                    <div class="ct-chart" id="stacked-bar"></div>
+                                    <div class="ct-chart price"></div>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +244,7 @@ home
         });
     });
 
-    $( document ).ready(function() {
+    $(document).ready(function() {
         $.ajax({
             type: 'get',
             url: "{{ route('home.getProductByMonth') }}",
@@ -250,7 +252,6 @@ home
                 '_token': $('input[name=_token]').val(),
             },
             success: function(data) {
-                console.log(data);
                 $('.product').attr('id', 'horizontal-bar');
                 Length = data.length;
                 var label = [];
@@ -272,6 +273,48 @@ home
                         offset: 70
                     }
                 });
+            },
+            error(data) {
+                console.log(data);
+            }
+        });
+
+        $.ajax({
+            type: 'get',
+            url: "{{ route('home.revenueByDay') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                $('.price').attr('id', 'stacked-bar');
+                var currentdate = new Date(); 
+                var datetime = currentdate.getDate() + "/"
+                            + (currentdate.getMonth()+1)  + "/" 
+                            + currentdate.getFullYear();
+                Length = data.length;
+                var label = [];
+                var total = [];
+                label[0] = datetime;
+                total[0] = data;
+                new Chartist.Bar('#stacked-bar', {
+                        labels: label,
+                        series: [
+                            total,
+                        ]
+                    }, {
+                        stackBars: true,
+                        axisY: {
+                            labelInterpolationFnc: function(value) {
+                                return (value / 1000) + 'k';
+                            }
+                        }
+                    }).on('draw', function(data) {
+                        if(data.type === 'bar') {
+                            data.element.attr({
+                                style: 'stroke-width: 30px'
+                            });
+                        }
+                    });
             },
             error(data) {
                 console.log(data);
