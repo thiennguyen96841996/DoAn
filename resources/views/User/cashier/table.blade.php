@@ -83,7 +83,6 @@ Phòng Bàn
                 'group_id': value,
             },
             success: function(data) {
-                console.log(data);
                 Length = data.length;
                 for(var i=0; i<Length; i++)
                 {
@@ -120,9 +119,45 @@ Phòng Bàn
     function selectProduct(id, name) {
             $('#info').html('<a href="#tab-primary-2" class="nav-link" role="tab" data-toggle="tab">Thông tin ' + name + '</a>');
     }
+
     $(document).ready(function(){
-        $('#group a').click(function(){
-            var value = 0;
+        $.ajax({
+            type: 'get',
+            url: "{{ route('cashier.tablePage') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                Length = data.length;
+                for(var i=0; i<Length; i++)
+                {
+                    if(data[i].status == 0) {
+                        var tabledata = "<div class='col-md-3'>"
+                                    + "<a onclick='selectProduct(" + data[i].id + ", \"" + data[i].name + "\")' title='Bàn trống' sectionId='" + data[i].id + "'>"
+                                    +    "<div class='p-30 text-center'>"
+                                    +        "<img class='img-fluid w-100' src = 'http://localhost:8000/assets/562.png' style='height: 130px;'>"
+                                    +        "<p class='m-b-15'>" + data[i].name + "</p>"
+                                    +   "</div>"
+                               + "</a>"
+                               + "</div>";
+                    } else {
+                        var tabledata = "<div class='col-md-3'>"
+                                    + "<a onclick='selectProduct(" + data[i].id + ", \"" + data[i].name + "\")' title='Bàn đang được sử dụng' sectionId='" + data[i].id + "'>"
+                                    +    "<div class='p-30 text-center'>"
+                                    +        "<img class='img-fluid w-100' src = 'http://localhost:8000/assets/table.jpg' style='height: 130px;'>"
+                                    +        "<p class='m-b-15'>" + data[i].name + "</p>"
+                                    +   "</div>"
+                               + "</a>"
+                               + "</div>";
+                    }
+                    
+                    $('#table').append(tabledata);
+                }
+            },
+            error(data) {
+                console.log(data);
+                alertSucces('Thông toán thất bại', 'mdi mdi-close-circle-outline', 'danger');
+            }
         });
     });
 </script>

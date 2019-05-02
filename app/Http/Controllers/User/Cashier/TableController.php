@@ -12,7 +12,7 @@ class TableController extends Controller
 {
     public function index() {
     	$groups = TableGroup::all();
-    	$bookings = Booking::where('status', 0)->get()->sortByDesc('time');
+    	$bookings = Booking::where('status', 1)->get()->sortByDesc('time');
     	return view('User.cashier.table', compact('groups', 'bookings'));
     }
 
@@ -24,5 +24,10 @@ class TableController extends Controller
     	}
 
     	return response()->json($data);
+    }
+
+    public function homePage(){
+        $data = Table::whereIn('status', [0,2])->get();
+        return response()->json($data);
     }
 }

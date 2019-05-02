@@ -68,13 +68,16 @@ Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], f
 });
 
 Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function () {
-    Route::resource('menu', 'MenuController');
+    Route::resource('menu', 'MenuController', ['except' => 'edit', 'update', 'destroy', 'create']);
     Route::post('getBooking', 'MenuController@getBooking')->name('getBooking');
     Route::post('getTable', 'MenuController@getTable')->name('getTable');
     Route::post('getMenu', 'MenuController@getMenu')->name('getMenu');
     Route::post('getDetailBill', 'MenuController@getDetailBill')->name('getDetailBill');
     Route::get('table', 'TableController@index')->name('cashier.table');
     Route::post('cashier-table', 'TableController@getTable')->name('cashier.getTable');
+    Route::post('cashier-payment', 'MenuController@updatePayment')->name('cashier.payment');
+    Route::get('menu-page', 'MenuController@homePage')->name('cashier.menuPage');
+    Route::get('table-page', 'TableController@homePage')->name('cashier.tablePage');
 });
 
 Route::group(['prefix' => 'chief', 'namespace' => 'User\chief'], function () {
