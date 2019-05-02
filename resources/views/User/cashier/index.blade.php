@@ -49,7 +49,7 @@ Menu
                                             <select class="form-control" name="table" id="table-book" required="">
                                                 <option value="">--Chọn bàn--</option>
                                                 @foreach($bookings as $value)
-                                                <option value="{{ $value->id }}">{{ $value->table->name }}</option>
+                                                <option value="{{ $value->id }}"  id="tables{{ $value->id }}">{{ $value->table->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -312,7 +312,7 @@ Menu
                                 + "</div>"    
                                 +"<div class='row'>"
                                 +    "<div class='col-md-3 offset-md-5'>"
-                                +        "<button class='btn btn-gradient-warning'>Thanh toán</button>"
+                                +        "<button class='btn btn-gradient-warning' onclick= 'updatePayment("+ data[0].booking_id +")'>Thanh toán</button>"
                                 +    "</div>"
                                 +"</div>";
                 $('#information').html('<a href="#tab-primary-2" onclick= "getDetailBill(' + data[0].customer_id + ', ' + data[0].booking_id + ')" class="nav-link" role="tab" data-toggle="tab">Thông tin bàn</a>');
@@ -324,6 +324,26 @@ Menu
         $('#table tbody').html('');
         $('.content-table').html('');
     });
+
+    function updatePayment(booking_id){
+        var bookid = booking_id;
+        $.ajax({
+            type: 'post',
+            url: "{{ route('cashier.payment') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+                'bookid': bookid
+            },
+            success: function(data) {
+                alertSucces('Đã thanh toán thành công', 'mdi mdi-check-circle-outline', 'success');
+            },
+            error(data) {
+                console.log(data);
+                alertSucces('Thông toán thất bại', 'mdi mdi-close-circle-outline', 'danger');
+            }
+        });
+        $('#tables'+ booking_id +'').remove();
+    }
 
     function getDetailBill(cusid, bookid){
         $.ajax({
@@ -399,5 +419,36 @@ Menu
             $('#pricetotal').text(priceId);
         });
     }
+    $(document).ready(function(){
+        $.ajax({
+            type: 'get',
+            url: "{{ route('cashier.menuPage') }}",
+            data: {
+                '_token': $('input[name=_token]').val(),
+            },
+            success: function(data) {
+                Length = data.length;
+                for(var i=0; i<Length; i++)
+                {
+                    var productdata = "<div class='col-md-3'>"
+                    + "<a onclick='selectProduct(" + data[i].id + ", \"" + data[i].name + "\", " + data[i].sale_price + ")' title='" + data[i].name +  "số lượng: " + data[i].quantity + "' sectionId='" + data[i].id + "'>"
+                           + "<div class='card'>"
+                            +    "<div class='p-30 text-center'>"
+                            +        "<img class='img-fluid w-100' src = 'http://localhost:8000/assets/images/products/" + data[i].img + "' style='height: 130px;'>"
+                            +        "<p class='m-b-15'>" + data[i].name + "</p>"
+                            +       " <p class='fa fa-money text-success p-r-5'>" + data[i].sale_price +"</p>"
+                            +   "</div>"
+                           + "</div>"
+                       + "</a>"
+                       + "</div>"
+                    $('#product').append(productdata);
+                }
+            },
+            error(data) {
+                console.log(data);
+                alertSucces('Thông toán thất bại', 'mdi mdi-close-circle-outline', 'danger');
+            }
+        });
+    });
 </script>
 @endsection

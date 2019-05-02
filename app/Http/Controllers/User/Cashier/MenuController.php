@@ -28,16 +28,6 @@ class MenuController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -83,40 +73,6 @@ class MenuController extends Controller
         return respone()->json($data);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
     public function getBooking(Request $request)
     {
         $data = Product::findOrFail($request->product);
@@ -147,6 +103,18 @@ class MenuController extends Controller
         ->leftjoin('bill_table_details', 'bill_tables.id', '=', 'bill_table_details.bill_table_id')
         ->leftjoin('products', 'bill_table_details.product_id', '=', 'products.id')
         ->get();
+        return response()->json($data);
+    }
+
+    public function updatePayment(Request $request) {
+        $booking = Booking::findOrFail($request->bookid);
+        $booking->status = 2;
+        $booking->save();
+        return $booking;
+    }
+
+    public function homePage(){
+        $data = Product::all();
         return response()->json($data);
     }
 }
