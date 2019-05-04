@@ -230,4 +230,5 @@ return [
     ],
     'link_product' => 'assets/images/products/',
     'link_customer' => 'assets/images/customer/',
+    'link_avatar' => 'assets/images/avatars/',
 ];

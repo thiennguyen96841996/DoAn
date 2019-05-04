@@ -1,7 +1,7 @@
 <div class="header navbar">
     <div class="header-container">
         <div class="nav-logo">
-            <a href="index.html">
+            <a href="{{ route('admin.home') }}">
                 <div class="logo logo-dark" style="background-image: url('{{ asset('assets/images/logo/logo.png') }}')"></div>
                 <div class="logo logo-white" style="background-image: url('{{ asset('assets/images/logo/logo-white.png') }}')"></div>
             </a>
@@ -15,7 +15,7 @@
                     <i class="mdi mdi-menu"></i>
                 </a>
             </li>
-            <li class="search-box">
+            <!-- <li class="search-box">
                 <a class="search-toggle" href="javascript:void(0);">
                     <i class="search-icon mdi mdi-magnify"></i>
                     <i class="search-icon-close mdi mdi-close-circle-outline"></i>
@@ -103,14 +103,14 @@
                         <span>You are Searching for '<b class="text-dark"><span class="serach-text-bind"></span></b>'</span>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
         <ul class="nav-right">
             @if(!Auth::guard('admin')->check())
                 <li><a href="{{ route('admin.login') }}">Login</a></li>
                 <li style="display: none"><a href="{{ route('admin.register') }}">Register</a></li>
             @else
-            <li class="dropdown dropdown-animated scale-left">
+            <!-- <li class="dropdown dropdown-animated scale-left">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="mdi mdi-apps"></i>
                 </a>
@@ -248,7 +248,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="user-profile dropdown dropdown-animated scale-left">
+ -->            <li class="user-profile dropdown dropdown-animated scale-left">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img class="profile-img img-fluid" src="{{ asset('assets/images/avatars/thumb-13.jpg') }}" alt="">
                 </a>
