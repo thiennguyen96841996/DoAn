@@ -108,8 +108,11 @@ class MenuController extends Controller
 
     public function updatePayment(Request $request) {
         $booking = Booking::findOrFail($request->bookid);
+        $billTable = BillTable::where('booking_id', $request->bookid)->first();
+        $billTable->status = 1;
         $booking->status = 2;
         $booking->save();
+        $billTable->save();
         return $booking;
     }
 

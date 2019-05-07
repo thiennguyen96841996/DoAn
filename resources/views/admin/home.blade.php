@@ -211,6 +211,7 @@ home
                 'id': id
             },
             success: function(data) {
+                console.log(data);
                 if(data != 0){
                     $('.product').attr('id', 'horizontal-bar');
                     Length = data.length;
