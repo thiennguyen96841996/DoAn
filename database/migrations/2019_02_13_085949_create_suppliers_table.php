@@ -17,7 +17,7 @@ class CreateSuppliersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('address')->nullable();
-            $table->integer('phone')->nullable();
+            $table->text('phone')->nullable();
             $table->string('info')->nullable();
             $table->integer('supplier_group_id');
             $table->SoftDeletes();

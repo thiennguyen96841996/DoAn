@@ -13,12 +13,16 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(App\Models\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'password' => Hash::make(123456),
         'remember_token' => str_random(10),
+        'birthday' => $faker->dateTimeBetween('1990-2-2', 'now'),
+        'avatar' => $faker->image($dir='public/assets/avatar', $width=60, $height=60,null, false),
+        'address' => $faker->address,
+        'department_id' => $faker->numberBetween($min = 2, $max = 4),
+        'sex' =>$faker->boolean,
     ];
 });

@@ -53,7 +53,7 @@ nhà cung cấp
                                 </td>
                                 <td data-value="{{ $value }}" data-toggle="modal" data-target="#modal-lg" id = "show-user">{{ $value->name }}
                                 </td>
-                                <td>{{ $value->address }}</td>
+                                <td>{{ str_Limit($value->address, 20) }}</td>
                                 <td>{{ $value->phone }}</td>
                                 <td>{{ $value->supplierGroup->name }}</td>
                                 <td class="text-center font-size-18">

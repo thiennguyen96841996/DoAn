@@ -183,24 +183,6 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="javascript:void(0);">
-                    <span class="icon-holder">
-                        <i class="fa fa-cog"></i>
-                    </span>
-                    <span class="title">Thiết lập cửa hàng</span>
-                    <span class="arrow">
-                        <i class="mdi mdi-chevron-right"></i>
-                    </span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0);">
-                            <span>Thông tin cửa hàng</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
         </ul>
     </div>
 </div>
