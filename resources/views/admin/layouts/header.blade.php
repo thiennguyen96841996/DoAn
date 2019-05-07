@@ -3,7 +3,7 @@
         <div class="nav-logo">
             <a href="{{ route('admin.home') }}">
                 <div class="logo logo-dark" style="background-image: url('{{ asset('assets/images/logo/logo.png') }}')"></div>
-                <div class="logo logo-white" style="background-image: url('{{ asset('assets/images/logo/logo-white.png') }}')"></div>
+                <div class="logo logo-white" style="background-image: url('{{ asset('assets/logo2.png') }}')"></div>
             </a>
         </div>
         <ul class="nav-left">

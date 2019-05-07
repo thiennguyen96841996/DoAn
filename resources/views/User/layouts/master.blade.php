@@ -8,7 +8,7 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('assets/images/logo/apple-touch-icon.html') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/logoo1.jpg') }}">
 
     <!-- core dependcies css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.css') }}" />

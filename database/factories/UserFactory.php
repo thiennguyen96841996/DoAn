@@ -20,7 +20,7 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'password' => Hash::make(123456),
         'remember_token' => str_random(10),
         'birthday' => $faker->dateTimeBetween('1990-2-2', 'now'),
-        'avatar' => $faker->image($dir='public/assets/avatar', $width=60, $height=60,null, false),
+        'avatar' => $faker->image($dir='public/assets/images/avatars', $width=60, $height=60,null, false),
         'address' => $faker->address,
         'department_id' => $faker->numberBetween($min = 2, $max = 4),
         'sex' =>$faker->boolean,
