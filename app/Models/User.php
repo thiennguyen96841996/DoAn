@@ -13,7 +13,6 @@ class User extends Authenticatable
     use SoftDeletes;
 
     const LETAN = 4;
-    const QUANLI = 1;
     const BEP = 3;
     const THUNGAN = 2;
 
