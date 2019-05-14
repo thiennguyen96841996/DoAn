@@ -82,8 +82,6 @@ return [
 
     'locale' => 'vi',
 
-    'faker_locale' => 'vi_VN',
-
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -108,7 +106,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'vi_VN',
 
     /*
     |--------------------------------------------------------------------------
@@ -232,5 +230,5 @@ return [
     ],
     'link_product' => 'assets/images/products/',
     'link_customer' => 'assets/images/customer/',
-    'link_avatar' => 'assets/images/avatars/',
+    'link_avatar' => 'assets/avatar/',
 ];

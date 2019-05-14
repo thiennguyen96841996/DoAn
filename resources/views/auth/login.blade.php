@@ -35,11 +35,11 @@
                     <div class="col-md-7 d-none d-md-block">
                     <img class="img-fluid" src="{{ asset('assets/logo2.png') }}" alt="">
                     <div class="m-t-15 m-l-20">
-                        <h1 class="font-weight-light font-size-35 text-white">{{ __('title_login') }}</h1>
-                        <p class="text-white width-70 text-opacity m-t-25 font-size-16">{{ __('describe_login') }}</p>
+                        <h1 class="font-weight-light font-size-35 text-white">Tien Tien Indival</h1>
+                        <p class="text-white width-70 text-opacity m-t-25 font-size-16">We are friendly</p>
                         <div class="m-t-60">
-                            <a href= "https://www.facebook.com/nguyenthien.hy" class="text-white text-link m-r-15">{{ __('term_p1') }} &amp; {{ __('term_p2') }}</a>
-                            <a href="https://www.facebook.com/nguyenthien.hy" class="text-white text-link">{{ __('privacy_p1') }} &amp; {{ __('privacy_p2') }}</a>
+                            <a href= "https://www.facebook.com/nguyenthien.hy" class="text-white text-link m-r-15">Term &amp; Conditions</a>
+                            <a href="https://www.facebook.com/nguyenthien.hy" class="text-white text-link">Privacy &amp; Policy</a>
                         </div>
                     </div>
                 </div>
