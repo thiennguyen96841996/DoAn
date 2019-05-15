@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 	Route::get('/', function () {
-    	return view('admin.welcome');
+    	return view('admin.auth.login');
 	});
     Route::get('/home', 'HomeController@index')->name('admin.home');
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('admin.login');
@@ -63,11 +63,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('revenueByDay', 'HomeController@revenueByDay')->name('home.revenueByDay');
 });
 
-Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist'], function () {
+Route::group(['prefix' => 'receptionist', 'namespace' => 'User\receptionist', 'middleware' => 'receptionist'], function () {
     Route::resource('booking', 'BookingController', ['except' => 'destroy', 'show']);
 });
 
-Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function () {
+Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier', 'middleware' => 'cashier'], function () {
     Route::resource('menu', 'MenuController', ['except' => 'edit', 'update', 'destroy', 'create']);
     Route::post('getBooking', 'MenuController@getBooking')->name('getBooking');
     Route::post('getTable', 'MenuController@getTable')->name('getTable');
@@ -80,7 +80,7 @@ Route::group(['prefix' => 'cashier', 'namespace' => 'User\cashier'], function ()
     Route::get('table-page', 'TableController@homePage')->name('cashier.tablePage');
 });
 
-Route::group(['prefix' => 'chief', 'namespace' => 'User\chief'], function () {
+Route::group(['prefix' => 'chief', 'namespace' => 'User\chief', 'middleware' => 'chief'], function () {
     Route::get('index', 'ChiefController@index')->name('chief.index');
     Route::post('postQuantity', 'ChiefController@postQuantity')->name('chief.postQuantity');
 });
